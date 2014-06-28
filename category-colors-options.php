@@ -6,7 +6,7 @@ Description:       Testing options for The Events Calendar Category Colors plugi
 Author:            Andy Fragen
 Version:           0.1.0
 Author URI:        https://github.com/afragen/
-GitHub Plugin URL: https://github.com/afragen/category-colors-options
+GitHub Plugin URI: https://github.com/afragen/category-colors-options
 GitHub Branch:     master
 */
 

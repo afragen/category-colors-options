@@ -5,13 +5,15 @@ Plugin Name:       Category Colors Options
 Plugin URI:        https://github.com/afragen/category-colors-options
 Description:       Testing options for The Events Calendar Category Colors plugin
 Author:            Andy Fragen
-Version:           0.2.0
+Version:           0.3.0
 Author URI:        https://github.com/afragen/
 GitHub Plugin URI: https://github.com/afragen/category-colors-options
 GitHub Branch:     master
 */
 
-add_action( 'plugins_loaded', 'teccc_load_options_class', 15 );
+use Fragen\Category_Colors;
+
+add_action( 'plugins_loaded', 'teccc_load_options_class', 20 );
 function teccc_load_options_class() {
 	if ( class_exists( '\\Fragen\\Category_Colors\\Main' ) ) {
 		new Category_Colors_Options();
@@ -25,9 +27,9 @@ class Category_Colors_Options {
 		teccc_add_text_color( 'Red', '#f00' );
 
 		add_filter( 'teccc_legend_html', array( $this, 'add_legend_explanation' ) );
-		add_action( 'teccc_add_legend_css', array( $this, 'my_legend_css' ), 10, 1 );
+		add_action( 'teccc_add_legend_css', array( $this, 'my_legend_css' ) );
 
-		//teccc_ignore_slug( 'just-show-up' );
+		//teccc_ignore_slug( 'just-show-up', 'conference' );
 		teccc_add_legend_view( 'upcoming' );
 		teccc_add_legend_view( 'photo' );
 		teccc_add_legend_view( 'week' );

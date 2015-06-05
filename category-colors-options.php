@@ -24,7 +24,7 @@ function teccc_load_options_class() {
 class Category_Colors_Options {
 
 	public function __construct() {
-		teccc_add_text_color( 'Red', '#f00' );
+		//teccc_add_text_color( 'Red', '#f00' );
 
 		//add_filter( 'teccc_legend_html', array( $this, 'add_legend_explanation' ) );
 		//add_action( 'teccc_add_legend_css', array( $this, 'my_legend_css' ) );

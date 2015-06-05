@@ -8,7 +8,7 @@ Author:            Andy Fragen
 Version:           0.1.0
 Author URI:        https://github.com/afragen/
 GitHub Plugin URI: https://github.com/afragen/category-colors-options
-GitHub Branch:     master
+GitHub Branch:     leisurevans
 */
 
 use Fragen\Category_Colors;

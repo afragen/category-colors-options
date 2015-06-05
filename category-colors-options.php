@@ -5,7 +5,7 @@ Plugin Name:       Category Colors Options
 Plugin URI:        https://github.com/afragen/category-colors-options
 Description:       Testing options for The Events Calendar Category Colors plugin
 Author:            Andy Fragen
-Version:           0.3.0
+Version:           0.3.1
 Author URI:        https://github.com/afragen/
 GitHub Plugin URI: https://github.com/afragen/category-colors-options
 GitHub Branch:     master
@@ -30,7 +30,8 @@ class Category_Colors_Options {
 		add_action( 'teccc_add_legend_css', array( $this, 'my_legend_css' ) );
 
 		//teccc_ignore_slug( 'just-show-up', 'conference' );
-		teccc_add_legend_view( 'upcoming' );
+		teccc_add_legend_view( 'list' );
+		//teccc_add_legend_view( 'upcoming' );
 		teccc_add_legend_view( 'photo' );
 		teccc_add_legend_view( 'week' );
 		//teccc_reposition_legend( 'tribe_events_before_footer' );

@@ -5,7 +5,7 @@
  * Plugin URI:        https://github.com/afragen/category-colors-options
  * Description:       Testing options for The Events Calendar Category Colors plugin
  * Author:            Andy Fragen
- * Version:           0.3.2
+ * Version:           0.3.3
  * Author URI:        https://github.com/afragen/
  * GitHub Plugin URI: https://github.com/afragen/category-colors-options
  * GitHub Branch:     master
@@ -13,7 +13,7 @@
 
 add_action( 'plugins_loaded', 'teccc_load_options_class', 20 );
 function teccc_load_options_class() {
-	if ( class_exists( '\\Fragen\\Category_Colors\\Main' ) ) {
+	if ( class_exists( '\\Fragen\\Category_Colors\\Main' ) && class_exists( 'Tribe__Events__Main' ) ) {
 		new Category_Colors_Options();
 	}
 }

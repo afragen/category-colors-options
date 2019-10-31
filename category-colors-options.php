@@ -21,22 +21,42 @@ function teccc_load_options_class() {
 class Category_Colors_Options {
 
 	public function __construct() {
-		teccc_add_text_color( 'Red', '#f00' );
+		// teccc_add_text_color( 'Red', '#f00' );
 
-		//teccc_ignore_slug( 'just-show-up', 'conference' );
+		// teccc_ignore_slug( 'just-show-up', 'conference' );
 
-		teccc_add_legend_view( 'list' );
-		//teccc_add_legend_view( 'upcoming' );
-		teccc_add_legend_view( 'photo' );
-		teccc_add_legend_view( 'week' );
+		// teccc_add_legend_view( 'list' );
+		// teccc_add_legend_view( 'upcoming' );
+		// teccc_add_legend_view( 'photo' );
+		// teccc_add_legend_view( 'week' );
 
-		//teccc_reposition_legend( 'tribe_events_before_footer' );
+		// teccc_reposition_legend( 'tribe_events_before_footer' );
 
-		//teccc_remove_default_legend();
+		// teccc_remove_default_legend();
 
-		add_filter( 'teccc_legend_html', array( $this, 'add_legend_explanation' ) );
-		add_action( 'teccc_add_legend_css', array( $this, 'my_legend_css' ) );
+		// add_filter( 'teccc_legend_html', array( $this, 'add_legend_explanation' ) );
+		// add_action( 'teccc_add_legend_css', array( $this, 'my_legend_css' ) );
 
+		add_filter(
+			'teccc_add_terms',
+			function() {
+				$translated_terms = array(
+					'municipality-events',
+					'municipality-events',
+					'ekdiloseis-dimou',
+					'ekdiloseis-allon-foreon',
+				);
+
+				return $translated_terms;
+			}
+		);
+
+		add_filter(
+			'teccc_set_options_hash',
+			function() {
+				return 'wpml_teccc_options_hash';
+			}
+		);
 	}
 
 	public function add_legend_explanation( $html ) {

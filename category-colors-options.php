@@ -18,6 +18,27 @@ function teccc_load_options_class() {
 	}
 }
 
+add_filter(
+	'teccc_add_terms',
+	function() {
+		$translated_terms = array(
+			'municipality-events',
+			'municipality-events',
+			'ekdiloseis-dimou',
+			'ekdiloseis-allon-foreon',
+		);
+
+		return $translated_terms;
+	}
+);
+
+add_filter(
+	'teccc_set_options_hash',
+	function() {
+		return 'wpml_teccc_options_hash';
+	}
+);
+
 class Category_Colors_Options {
 
 	public function __construct() {
@@ -37,26 +58,6 @@ class Category_Colors_Options {
 		// add_filter( 'teccc_legend_html', array( $this, 'add_legend_explanation' ) );
 		// add_action( 'teccc_add_legend_css', array( $this, 'my_legend_css' ) );
 
-		add_filter(
-			'teccc_add_terms',
-			function() {
-				$translated_terms = array(
-					'municipality-events',
-					'municipality-events',
-					'ekdiloseis-dimou',
-					'ekdiloseis-allon-foreon',
-				);
-
-				return $translated_terms;
-			}
-		);
-
-		add_filter(
-			'teccc_set_options_hash',
-			function() {
-				return 'wpml_teccc_options_hash';
-			}
-		);
 	}
 
 	public function add_legend_explanation( $html ) {

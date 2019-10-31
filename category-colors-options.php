@@ -28,7 +28,7 @@ add_filter(
 			'ekdiloseis-allon-foreon',
 		);
 
-		return $translated_terms;
+		//return $translated_terms;
 	}
 );
 
@@ -57,7 +57,6 @@ class Category_Colors_Options {
 
 		// add_filter( 'teccc_legend_html', array( $this, 'add_legend_explanation' ) );
 		// add_action( 'teccc_add_legend_css', array( $this, 'my_legend_css' ) );
-
 	}
 
 	public function add_legend_explanation( $html ) {

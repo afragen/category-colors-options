@@ -19,9 +19,11 @@ class Category_Colors_Options {
 		// teccc_ignore_slug( 'just-show-up', 'conference' );
 
 		teccc_add_legend_view( 'list' );
+		teccc_add_legend_view( 'day' );
 		// teccc_add_legend_view( 'upcoming' );
 		teccc_add_legend_view( 'photo' );
 		teccc_add_legend_view( 'week' );
+		teccc_add_legend_view( 'map' );
 
 		// teccc_reposition_legend( 'tribe_events_before_footer' );
 

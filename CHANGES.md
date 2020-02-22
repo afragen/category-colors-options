@@ -1,5 +1,6 @@
 #### 0.4.0 / 2020-02-22
 * Quick refactoring for more organization and better examples
+* update examplesphp
 
 #### 0.3.3 / 2017-02-19
 * added check for `class_exists( 'Tribe__Events__Main' )`

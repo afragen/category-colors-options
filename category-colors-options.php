@@ -2,9 +2,9 @@
 /**
  * Plugin Name:       Category Colors Options
  * Plugin URI:        https://github.com/afragen/category-colors-options
- * Description:       Testing options for The Events Calendar Category Colors plugin
+ * Description:       Testing options for The Events Calendar Category Colors plugin.
  * Author:            Andy Fragen
- * Version:           0.4.0
+ * Version:           0.4.1
  * Author URI:        https://github.com/afragen/
  * GitHub Plugin URI: https://github.com/afragen/category-colors-options
  * Requires PHP:      5.6
@@ -20,12 +20,9 @@ class Category_Colors_Options {
 
 		teccc_add_legend_view( 'list' );
 		teccc_add_legend_view( 'day' );
-		// teccc_add_legend_view( 'upcoming' );
 		teccc_add_legend_view( 'photo' );
 		teccc_add_legend_view( 'week' );
 		teccc_add_legend_view( 'map' );
-
-		// teccc_reposition_legend( 'tribe_events_before_footer' );
 
 		// teccc_remove_default_legend();
 	}

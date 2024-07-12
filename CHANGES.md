@@ -1,3 +1,6 @@
+#### 0.5.0 / 2024-07-11
+* update to `return` hook data
+
 #### 0.4.0 / 2020-02-22
 * Quick refactoring for more organization and better examples
 * update examplesphp
